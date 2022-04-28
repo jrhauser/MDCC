@@ -1,0 +1,65 @@
+{% extends "layout.html" %} {% block title %} Join {% endblock %} {% block main
+%}
+<h1>How to Join:</h1>
+<h5 class="mt-4">
+  <a href="/static/Mason_Dixon_Application.pdf"
+    >Mason-Dixon Canoe Club Membership Application</a
+  >
+</h5>
+<h4 class="mt-4">
+  Annual dues are only $10 per household. There are three ways to join:
+</h4>
+
+<h5>In person:</h5>
+<p>
+  Bring your completed application and $10 membership fee to the Winter Roll
+  Sessions at the YMCA Pool in Hagerstown. Applications will also be available
+  at the pool. These are usually held on 4 consecutive Sundays in March from
+  9-11 AM. This a great way to meet other club members and work on your kayak
+  roll. You don't have to know how to roll to join because
+  <b>beginners are always welcome!</b> We can usually help with gear too if
+  needed.
+</p>
+<h5>Snail Mail:</h5>
+<p>
+  Print and fill in the
+  <a href="/static/Mason_Dixon_Application.pdf">membership application.</a> Add
+  a $10 check and mailt it to the address at the top of the form.
+</p>
+<h5>Online:</h5>
+<p>
+  While you will still need to either print out and mail or email a
+  <b>signed</b>
+  <a href="/static/Mason_Dixon_Application.pdf">membership application</a> you
+  can pay online with a credit card or paypal. Note that a
+  <u>$1 dollar service fee</u> will be added to the cost of membership to cover
+  paypal's transaction fee.
+</p>
+<form
+  action="https://www.paypal.com/cgi-bin/webscr"
+  method="post"
+  target="_top"
+>
+  <input name="cmd" value="_s-xclick" type="hidden" />
+  <input name="hosted_button_id" value="N4FMLBX94T3CJ" type="hidden" />
+  <input
+    alt="PayPal - The safer, easier way to pay online!"
+    name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif"
+    type="image"
+  />
+  <img
+    alt=""
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
+    height="1"
+    width="1"
+    border="0"
+  />
+</form>
+<p>
+  New members joining in November or December will receive a paid-up membership
+  for the next full year.
+</p>
+
+<h6>SYOTR!</h6>
+{% endblock %}
