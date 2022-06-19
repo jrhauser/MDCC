@@ -43,7 +43,7 @@ def after_request(response):
     return response
 #---------------------------------------------------------------------------------
 
-@app.route("/")
+@app.route("/", methods=["GET"])
 def home():
     return render_template("index.html")
 
