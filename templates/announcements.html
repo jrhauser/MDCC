@@ -1,0 +1,38 @@
+{% extends "layout.html" %} {% block title %} Announcements{% endblock %} {%
+block main %}
+<div class="row">
+  <div class="col">
+    {% for announcement in announcements %}
+    <div class="card m-3" style="width: 18rem">
+      <div class="card-header fs-3">{{ announcement['title'] }}</div>
+      <div class="card-body">
+        <div class="title h5">
+          {{ announcement["date"] }} - {{announcement["time"] }}
+        </div>
+        <div class="card-text fs-5">{{ announcement['description'] }}</div>
+      </div>
+      <div class="card-subtitle m-1 text-muted align-self-end">
+        {{ announcement['posted_time'] }}
+      </div>
+      <form method="post" action="/delete">
+        <input
+          type="hidden"
+          name="announcement_to_delete"
+          value="{{ announcements['id'] }}"
+        />
+        <input
+          type="submit"
+          value="Delete"
+          class="btn m-1 bg-danger bg-opacity-50"
+        />
+      </form>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<div class="row m-3">
+  <div class="col-3">
+    <a class="btn-info p-3" href="/newAnnouncement">New Announcement</a>
+  </div>
+</div>
+{% endblock %}
